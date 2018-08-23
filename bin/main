@@ -1,12 +1,12 @@
 #! /usr/bin/env node 
 const program = require('commander')
-
+const create = require('../lib/create.js')
 program
     .command('init [packagename]')
     .alias('i [packagename]')
     .description('初始化项目')
     .action((packagename,option) => {
-        console.log('Hello World',packagename)
+        create(packagename)
     })
     
 program.parse(process.argv)
